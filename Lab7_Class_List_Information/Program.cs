@@ -36,12 +36,12 @@ namespace Lab7_Class_List_Information
                     answer = Console.ReadLine().ToLower();
                     if (answer == "color")
                     {
-                        Console.WriteLine($"{studentNames[rosterChoice - 1]}'s favorite color is {colorFavorites[rosterChoice - 1]}. Would you like to know more (Y or N)? ");
+                        Console.WriteLine($"{studentNames[rosterChoice - 1]}'s favorite color is {colorFavorites[rosterChoice - 1]}. Would you like to know more about the class (Y or N)? ");
                         correctChoice = true;
                     }
                     else if (answer == "place")
                     {
-                        Console.WriteLine($"{studentNames[rosterChoice - 1]}'s favorite place is {favoritePlaces[rosterChoice - 1]}. Would you like to know more (Y or N)? ");
+                        Console.WriteLine($"{studentNames[rosterChoice - 1]}'s favorite place is {favoritePlaces[rosterChoice - 1]}. Would you like to know more about the class (Y or N)? ");
                         correctChoice = true;
                     }
                     else
@@ -51,6 +51,7 @@ namespace Lab7_Class_List_Information
                 }
                 repeat = GetYesorNo();
             } while (repeat);
+            Console.WriteLine("Thanks for trying my program!");
         }
 
         private static int GetInt(string prompt)
