@@ -6,14 +6,15 @@ namespace Lab7_Class_List_Information
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Welcome to the Class information Storage Center!\n");
             bool repeat = true;
             //declaring all the information in parallel strings
             string[] studentNames = { "Adam", "Ben", "Cam", "David", "Evan", "Frank", "Gary", "Hailey", "Ingred", "Jamie", "Kyle" };
             string[] colorFavorites = { "amber", "blue", "copper", "denim", "emerald", "fusia", "gold", "hot pink", "indigo", "jade", "khaki" };
-            string[] favoritePlaces = { "alaska", "boston", "colorado", "delaware", "egypt", "florida", "glasgow", "hawaii", "india", "jacksonville", "kansas" };
+            string[] favoritePlaces = { "Alaska", "Boston", "Colorado", "Delaware", "Egypt", "Florida", "Glasgow", "Hawaii", "India", "Jacksonville", "Kansas" };
             do
             {
-                Console.Write("Which person would you like to know more about?\n");
+                Console.WriteLine("Which person would you like to know more about?\n");
                 int rosterChoice = -1;
 
                 while (rosterChoice > 11 || rosterChoice < 1)
@@ -26,7 +27,7 @@ namespace Lab7_Class_List_Information
                     }
                 }
 
-                Console.WriteLine($"Student {rosterChoice} is {studentNames[rosterChoice - 1]} would you like to know their favorite color or place? " +
+                Console.WriteLine($"\nStudent {rosterChoice} is {studentNames[rosterChoice - 1]} would you like to know their favorite color or place? " +
                     $"(Enter \"Color\" or \"Place\")");
 
                 bool correctChoice = false;
@@ -36,12 +37,12 @@ namespace Lab7_Class_List_Information
                     answer = Console.ReadLine().ToLower();
                     if (answer == "color")
                     {
-                        Console.WriteLine($"{studentNames[rosterChoice - 1]}'s favorite color is {colorFavorites[rosterChoice - 1]}. Would you like to know more about the class (Y or N)? ");
+                        Console.WriteLine($"\n{studentNames[rosterChoice - 1]}'s favorite color is {colorFavorites[rosterChoice - 1]}. Would you like to know more about the class (Y or N)? ");
                         correctChoice = true;
                     }
                     else if (answer == "place")
                     {
-                        Console.WriteLine($"{studentNames[rosterChoice - 1]}'s favorite place is {favoritePlaces[rosterChoice - 1]}. Would you like to know more about the class (Y or N)? ");
+                        Console.WriteLine($"\n{studentNames[rosterChoice - 1]}'s favorite place is {favoritePlaces[rosterChoice - 1]}. Would you like to know more about the class (Y or N)? ");
                         correctChoice = true;
                     }
                     else
